@@ -20,7 +20,9 @@ bot.on('message', (payload, reply) => {
     reply({
         text
     }, (err) => {
-        if (err) throw err
+        if (err) {
+            console.log(err.message)
+        }
 
         console.log(`Echoed back : ${text}`)
     })
